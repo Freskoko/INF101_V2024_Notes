@@ -1,3 +1,5 @@
+# Polymorphism
+
 interface er som en kontrakt
 
 ```java

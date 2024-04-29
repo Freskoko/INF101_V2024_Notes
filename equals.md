@@ -1,3 +1,5 @@
+# Equals
+
 Vanlig equals:
 
 er egentlig bare == 

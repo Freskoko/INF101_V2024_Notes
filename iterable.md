@@ -1,3 +1,5 @@
+# Iterable
+
 public Iterable<Page> getAllBookPages(){
 
 	return (this.pages.deepCopy) kanskje igs

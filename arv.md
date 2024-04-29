@@ -1,3 +1,5 @@
+# Arv
+
 bruk extends så kan du hente alle feltvariabeler og metoder fra øvre klasse
 
 husk @override

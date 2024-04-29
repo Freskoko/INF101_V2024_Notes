@@ -1,3 +1,5 @@
+# Static
+
 ```java
 /* 
  * Merk: dette eksempelet ser fornuftig ut ved første øyekast, men er IKKE til
