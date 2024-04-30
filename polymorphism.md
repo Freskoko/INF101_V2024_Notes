@@ -1,6 +1,6 @@
 # Polymorphism
 
-interface er som en kontrakt
+A class that takes on the role of several classes through inheritence (extends) or interface (implements) is an example of polymorphism
 
 ```java
 interface CommandLineInterface {
@@ -13,6 +13,7 @@ interface CommandLineInterface {
 ```
 
 kan lage en dummy shell (som implementerer commandlineinterface)
+
 ```CommandLineInterface dummy = new DummyShell;```
 
 eller to egene

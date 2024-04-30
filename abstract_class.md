@@ -1,10 +1,14 @@
 # abstract classes
 
-abstract classes are like "wip" it allows to only implemenet some parts of interface!
+Setting a class to abstract classes allows them to only implemenet some parts of interface.
 
-we just pick and choose. someone else (or us) will implemenet the rest later
+we just pick and choose. someone else (or us) will implement the rest later
 
-this means we can use all the methods from the interface without having them implemented
+This means we can use all the methods from the interface without having them implemented
+
+Example:
+
+(the interface ICoronaData has several methods: `cumulativeDeaths()`,`getDailyDeaths()`,`deathsPerMillion()`)
 
 ```java
 public abstract class AbstractCoronaData implement ICoronaData{
@@ -39,6 +43,4 @@ public abstract class AbstractCoronaData implement ICoronaData{
         return rate;
     }
 }
-
-
 ```

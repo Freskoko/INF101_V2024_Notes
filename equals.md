@@ -38,7 +38,12 @@ så vi må lage egen:
     return this.name.equals(other.name) && this.id.equals(other.id);
   }
 
-  // TODO: Husk å implementere hashCode() også! Se avsnittet senere!
+  // !!! IMPORTANT: WHEN OVERRIDING EQUALS ALWAYS DO THE SAME WITH HASHCODE
+  @Override
+  public int hashCode() {
+      return Objects.hash(this.name, this.id);
+  }
+
 
 ```
 

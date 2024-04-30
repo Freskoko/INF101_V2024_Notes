@@ -1,21 +1,16 @@
 # Static
 
+Static makes the function be able to be ran from anywhere with `Object.method()`
+This is good for constants perhaps, but all instances of a class using the method will pont to the same info.
+
 ```java
-/* 
- * Merk: dette eksempelet ser fornuftig ut ved første øyekast, men er IKKE til
- * etterfølgelse. Les «Hvorfor man alltid unngår klassevariabler» -seksjonen
- * under eksempelet for å forstå hvorfor.
- */
  
 class Person {
-  // Statisk: klassevariabeler, klassemetoder
   static int numberOfPersons = 0;
 
   static void incrementNumberOfPersons() {
     Person.numberOfPersons++;
   }
-
-  // Ikke-statisk: instansvariabler, konstruktører, instansmetoder
   String name;
 
   Person(String name) {
@@ -53,12 +48,11 @@ void testName() {
 void testNumberOfPersons() {
   Person p1 = new Person("Adam");
   Person p2 = new Person("Eva");
-  assertEquals(2, Person.numberOfPersons); // feiler
+  assertEquals(2, Person.numberOfPersons); // feiler fordi blir 3
 }
 ```
-
 Siden de forskjellige persons alle peker på samme, vil testen fele siden number of persons er 3!
 
 `Statiske variabler som endrer seg er som globale variabler: ondskapsfulle. De bør unngås for enhver pris`
 
-Bruk heller en managr class ! feks facotory
+Bruk heller en manager class ! eller feks facotory
