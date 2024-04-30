@@ -1,5 +1,19 @@
 # Iterable
 
+	Et Iterator -objekt kan «bla gjennom» en samling elementer én gang.
+	
+	Et Iterable -objekt har en metode for å lage nye Iterator-objekter.
+	
+	Et objekt som er Iterable kan man derfor bla igjennom flere ganger.
+
+
+
+
+------
+
+exam:
+
+
 public Iterable<Page> getAllBookPages(){
 
 	return (this.pages.deepCopy) kanskje igs
