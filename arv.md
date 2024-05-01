@@ -1,32 +1,53 @@
-# Arv
+# Arv (extends)
 
-bruk extends så kan du hente alle feltvariabeler og metoder fra øvre klasse
+Bruk extends så kan du hente alle feltvariabeler og metoder fra øvre klasse
 
-husk @override
+Husk @override hvis man skal override metoder fra mother class
 
-kall på super() for å inite fra øvre klassen
+Kall på super() for å inite fra øvre klassen
 
-### Klasser som er final
+### Eksempel:
 
-Når man definerer en klasse er det mulig å definere den som final, for eksempel slik:
+```java 
+public class GameEntity { // mother class
 
+  private int actionInterval = 300; // default
+  private CellPosition cellPosition;
+
+  public GameEntity(
+      CellPosition cellPosition,
+      int actionInterval) {
+
+    this.cellPostion = cellPosition;
+    this.actionInterval = actionInterval;
+  }
+}
+
+```
 ```java
-public final class Rectangle {
-  // ...
+public class Bullet extends GameEntity {
+
+  private final int speed;
+
+  private Bullet(
+      int actionInterval,
+      CellPosition cellPosition,
+      int speed) {
+    super(cellPosition, actionInterval); // super kall til GameEntity constructor
+    this.speed = speed;
+  }
 }
 ```
 
-Da vil det ikke være mulig å arve fra denne klassen. Dette er en god praksis.
+### Klasser som er final
 
-alle klasser arver allerede fra Object klassen.
+Når man definerer en klasse som final vil det ikke være mulig å arve fra denne klassen. Dette er en god praksis.
 
-alle klasser har da disse metodene:
+```java
+public final class CantExtendMe {
+  // ...
+}
+```
+alle klasser arver allerede fra Object klassen, og arver da disse metodene:
 
-
-- toString() (denne metoden kalles automatisk når objektet skrives ut. Ved å overskrive den kan man velge selv hvordan objekter i en klasse representeres som strenger)
-
-- equals(Object) og hashCode() 
-
-- getClass()
-
-- og noen flere...
+toString(), equals(Object), hashCode(), getClass(), noen flere 

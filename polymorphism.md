@@ -1,6 +1,6 @@
-# Polymorphism
+# Polymorphism (interface)
 
-A class that takes on the role of several classes through inheritence (extends) or interface (implements) is an example of polymorphism
+A class that takes on the role of several classes through inheritence (extends) or interface (implements) is an example of polymorphism (polymprhism = many forms)
 
 ```java
 interface CommandLineInterface {

@@ -1,5 +1,9 @@
 # Equals
 
+x == y sjekker om de er på samme sted i minne.
+
+To personer med samme navn og id! De er jo like, men er ikke samme sted på minne, så == funker ikke. Vi må @Override equals-metoden
+
 Vanlig equals:
 
 er egentlig bare == 
@@ -28,44 +32,46 @@ så vi må lage egen:
       return false;
     }
 
+    // hashcode er viktig
     if (!obj.hashCode != this.hashCode){
         return false;
     }
 
-    
     // cast and check all instance variables 
     Person other = ((Person) obj); // cast object to person
     return this.name.equals(other.name) && this.id.equals(other.id);
+    // bruk assertTrue(Arrays.deepEquals(anArray, anotherArray)); for arrays
   }
 
-  // !!! IMPORTANT: WHEN OVERRIDING EQUALS ALWAYS DO THE SAME WITH HASHCODE
+  // !!! IMPORTANT: WHEN OVERRIDING EQUALS ALWAYS OVERRIDE HASHCODE
   @Override
   public int hashCode() {
       return Objects.hash(this.name, this.id);
   }
-
-
 ```
 
-### rules:
+### Rules:
 
-    Anta at x ikke er null. Da må equals-metoden oppfylle følgende krav:
+Anta at x ikke er null. Da må equals-metoden oppfylle følgende krav:
 
-    Refleksivitet: x.equals(x) skal returnere true uansett hva x er.
+**Refleksivitet**: x.equals(x) skal returnere true uansett hva x er.
 
-    Symmetri: x.equals(y) skal returnere true hvis og bare hvis y.equals(x) gjør det.
+**Symmetri**: x.equals(y) skal returnere true hvis og bare hvis y.equals(x) gjør det.
 
-    Transitivitet: Hvis x.equals(y) returnerer true og y.equals(z) returnerer true, så skal x.equals(z) returnere true.
+**Transitivitet**: Hvis x.equals(y) returnerer true og y.equals(z) returnerer true, så skal x.equals(z) returnere true.
 
-    Konsistens: x.equals(y) skal returnere samme verdi (enten true eller false) hver gang så lenge objektene ikke endrer seg.
+**Konsistens**: x.equals(y) skal returnere samme verdi (enten true eller false) hver gang så lenge objektene ikke endrer seg.
 
-    Null-sikkerhet: x.equals(null) skal returnere false uansett hva x er.
+**Null-sikkerhet**: x.equals(null) skal returnere false uansett hva x er.
 
-    dersom x.equals(y) returnerer true, så må også x.hashCode() == y.hashCode() evaluere til true.
+**Hashcode** +1 lissom
+dersom x.equals(y) returnerer true, så må også x.hashCode() == y.hashCode() evaluere til true.
 
 ### hashcode er viktig
 
 uten hashcode:
+
+Eksempel med `contains` (som bruker `equals`)
 
 ```java
 // et sted i koden...
@@ -84,12 +90,13 @@ så lag hashcode:
   @Override
   public int hashCode() {
     return Objects.hash(
-        this.symbol,
-        Arrays.deepHashCode(this.shape),
-        this.pos
+        this.name,
+        this.id
     );
-  }
+  } // Arrays.deepHashCode(this.shape) for arrays!
 ```
+
+Også vil det funke!
 
 ---------
 

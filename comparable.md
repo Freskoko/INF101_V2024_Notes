@@ -1,13 +1,13 @@
+# Comparable
 todo LES OM SORTERING
 
 for å bruke
 
 `Collections.sort(List<ItemThing>)`
 
-Så mp ItemThing implement corabable
+Så må ItemThing implement comparable
 
-slikt:
-
+Java buildt-in typer implementer allerede comparable (feks String)
 
 ```java
 
@@ -22,7 +22,6 @@ public class MusicSorter{
     }
 }
 
-
 public class ItemThing implements Comparable<ItemThing>{
 
     // da må vi legge til compare to for å implemente interfacet
@@ -32,13 +31,11 @@ public class ItemThing implements Comparable<ItemThing>{
         // som git ett annet objekt, og den har bygd inn compareTo
         return this.getArtist.compareTo(o.getArtist());
     }
-
-    // men hva hvis vi vil ha flere ting sammenlignet??
 };
-
-da måå vi lage to sanger:
-
-public class ReleaseDateComparator implements Conmparator<Song>{
+```
+Men hva hvis vi vil ha flere ting sammenlignet? Da må vi lage en annen klasse:
+```java
+public class ReleaseDateComparator implements Comparator<Song>{
 
     @Override
     public int compare (Song song1, Song song2){
@@ -46,6 +43,4 @@ public class ReleaseDateComparator implements Conmparator<Song>{
     }
 
 }
-
-
 ```

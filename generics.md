@@ -91,5 +91,3 @@ Hvis både `Integer` og `Double` er subtyper av `Number` kan man skrive:`
 `List<Number> a = new ArrayList<>();` og da kan man legge inn både double og int objekter
 
 Men OBS! *`List<Integer> og List<Double> er IKKE subtyper av List<Number>`*
-
-Når man bruker Generics vil 
