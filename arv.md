@@ -44,7 +44,7 @@ public class Bullet extends GameEntity {
 Når man definerer en klasse som final vil det ikke være mulig å arve fra denne klassen. Dette er en god praksis.
 
 ```java
-public final class CantExtendMe {
+public final class CantExtendFromMe {
   // ...
 }
 ```

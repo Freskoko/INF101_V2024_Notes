@@ -3,7 +3,7 @@
 Static makes the function be able to be ran from anywhere with `Object.method()`
 This is good for constants perhaps, but all instances of a class using the method will pont to the same info.
 
-NOTE !!! Static har ikke tilgang til `this`!
+NOTE Static har ikke tilgang til `this`!
 
 ```java
  
