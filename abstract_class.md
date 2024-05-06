@@ -1,11 +1,5 @@
 # Abstract classes
 
-Kjapt litt om bare ordet abstraction:
-
-![abstract](imgs/abstract.png)
-
-Så kommer det om abstract CLASSES
-
 Setting a class to abstract classes allows them to only implement some parts of interface.
 
 we just pick and choose. someone else (or us) will implement the rest later
@@ -48,6 +42,19 @@ public abstract class AbstractCoronaData implement ICoronaData{
         }
         return rate;
     }
+}
+```
+
+We NEVER want to make a copy of a class which is ONLY abstract.
+They can be a good building block though.
+
+```java
+public abstract class Game {
+    // Tetris/TickTackToe can extend this, but never make a just "Game"
+
+    protected String name; // feltvariabel must have
+
+    public abstract boolean gameOver(); // all games must have
 }
 ```
 

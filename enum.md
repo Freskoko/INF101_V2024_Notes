@@ -1,4 +1,9 @@
+# Enum
+
+*Lagre informasjon på en smart måte*
+
 ```java
+
 public enum Grade {
     
     A(5),

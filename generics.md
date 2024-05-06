@@ -1,11 +1,14 @@
 # Generics
 
-Generics gjør at feks en funksjon kan ta en hvilkensomhelst type
+*Generics gjør at feks en funksjon kan ta inn hvilkensomhelst type, eller implementere ting på en smart måte*
+
+Kan ikke brukes på primitive typer
 
 Eksempel: Box som kan ha hva som helst i seg 
 
 ```java
-public class MyBox<T> {
+public class MyBox<T> { 
+  // T vil være samme type gjennom hele funksjonen
   private T element = null;
 
   public void set(T element) {
@@ -21,7 +24,8 @@ public class MyBox<T> {
 Eller flere ting:
 
 ```java
-public class Pair<A, B> {
+public class Pair<A, B> { 
+  // A og B vil kunne være samme, eller forskjellige typer gjennom hele funksjonen
   private A first;
   private B second;
 
@@ -75,6 +79,15 @@ public <T extends Box> T largestArea(List<T> a) { // <T extends Box> viktig
     }
   }
   return largest;
+}
+```
+
+Eller wildcard generics:
+
+```java
+public static void addTo(Cat cat, List<? super T> list){
+  // Her kan ? være en hvilken som helst type over Cat, altså: Mammal, Animal eller Object
+  list.add(cat);
 }
 ```
 

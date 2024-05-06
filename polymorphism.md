@@ -1,5 +1,7 @@
 # Polymorphism (interface)
 
+*Interface gjør det mulig å ha flere klasser som har samme metoder men forskjellig oppførsel*
+
 A class that takes on the role of several classes through inheritence (extends) or interface (implements) is an example of polymorphism (polymorphism = many forms)
 
 ```java
