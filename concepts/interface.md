@@ -16,7 +16,7 @@ interface CommandLineInterface {
 }
 ```
 
-kan lage en dummy shell (som implementerer commandlineinterface)
+kan lage en dummy shell (som implementerer CommandLineInterface)
 
 ```CommandLineInterface dummy = new DummyShell;```
 
