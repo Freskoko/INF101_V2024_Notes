@@ -4,7 +4,7 @@ Composition betyr at vi kun har en klasse Game
 
 Game har feltvariabler som gir ulik funksjonalitet
 
-Metodene i Game kaller da på metoder i feltvariablene
+Metodene i Game kaller da på metoder i field-variabelene
 
 ```java
 public class Game {
