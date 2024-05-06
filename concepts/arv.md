@@ -6,7 +6,7 @@ Bruk extends så kan du hente alle feltvariabeler og metoder fra øvre klasse
 
 Husk @override hvis man skal override metoder fra mother class
 
-Kall på super() for å inite fra øvre klassen
+Kall på super() for å inite fra øvre klassen!
 
 ### Eksempel:
 
