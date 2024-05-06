@@ -1,12 +1,13 @@
-name: Docs to PDF
+name: MD to PDF
 # This workflow is triggered on pushes to the repository.
 on:
   push:
     branches:
       - main
-    # Paths can be used to only trigger actions when you have edited certain files, such as a file at the top-level directory
+    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /concepts directory
     paths:
-      - "**.md"
+      - 'concepts/**.md'
+      - 'imgs/**'
 
 jobs:
   converttopdf:
@@ -16,9 +17,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_path: .
+          input_dir: concepts
           output_dir: pdfs
-          # for example <img src="./images/file-name.png">
+          images_dir: imgs
+          # for example <img src="./imgs/file-name.png">
           image_import: ./imgs
           # Default is true, can set to false to only get PDF files
           build_html: false
