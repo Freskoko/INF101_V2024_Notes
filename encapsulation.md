@@ -41,6 +41,13 @@ hver tid
 
 Feks at ett trafikklys kan være i 1 av 4 tilstander.
 
-Eller at en persons alder MÅ være dato - fødselsdato
-
+fra tidligere eksamen: **To dører, hvor en ALLTID må være lukket**
+```java
+private void openDoor(Door door) {
+    if(!inner.isOpen() && !outer.isOpen())
+        door.open();
+    else
+        System.out.println("Can not open both at the same time");
+}
+```
 Må ALLTID overholdes!

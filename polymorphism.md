@@ -1,4 +1,6 @@
-# Polymorphism (interface)
+# Interface
+
+*A type of Polymorphism*
 
 *Interface gjør det mulig å ha flere klasser som har samme metoder men forskjellig oppførsel*
 

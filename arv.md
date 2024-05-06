@@ -1,5 +1,7 @@
 # Arv (extends)
 
+*A type of Polymorphism*
+
 Bruk extends så kan du hente alle feltvariabeler og metoder fra øvre klasse
 
 Husk @override hvis man skal override metoder fra mother class
