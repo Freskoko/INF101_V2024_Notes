@@ -1,6 +1,6 @@
 # Collections
 
-*Collection er bare en bestefar til List, ArrayList og mange andre*
+*Collection er bare en bestefar til List, ArrayList og mange andre klasser*
 
 ![collections](imgs/collections.png)
 
