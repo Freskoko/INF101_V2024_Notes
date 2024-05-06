@@ -23,16 +23,16 @@ jobs:
         uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_dir: concepts
-          output_dir: pdfs
+          output_dir: pdfs_actions
           images_dir: imgs
           image_import: ./imgs
           build_html: false
           
       - name: List files in pdfs directory
-        run: ls pdfs
+        run: ls pdfs_actions
       
       - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v3
         with:
           name: docs
-          path: pdfs
+          path: pdfs_actions

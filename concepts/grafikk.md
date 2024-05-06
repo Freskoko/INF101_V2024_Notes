@@ -1,3 +1,3 @@
 # Grafikk
 
-todo
+todo look at this
