@@ -4,7 +4,7 @@
 
 Kan ikke brukes på primitive typer
 
-Eksempel: Box som kan ha hva som helst i seg 
+Eksempel: Box som kan ha hvilken som helst type i seg 
 
 ```java
 public class MyBox<T> { 
