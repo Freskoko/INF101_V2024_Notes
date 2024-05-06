@@ -1,4 +1,4 @@
-name: MD to PDF
+name: Docs to PDF
 # This workflow is triggered on pushes to the repository.
 on:
   push:
@@ -14,8 +14,11 @@ jobs:
     name: Build PDF
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        
+      - name: Convert Markdown To PDF 
+        uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_dir: concepts
           output_dir: pdfs
@@ -24,7 +27,11 @@ jobs:
           image_import: ./imgs
           # Default is true, can set to false to only get PDF files
           build_html: false
-      - uses: actions/upload-artifact@v3
-        with:
-          name: docs
-          path: pdfs
+          
+      # This step commits the newly generated PDFs to the Git repo
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Build PDFs" && git push)
