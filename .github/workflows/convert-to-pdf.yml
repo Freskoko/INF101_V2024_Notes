@@ -1,10 +1,9 @@
 name: Docs to PDF
-# This workflow is triggered on pushes to the repository.
+
 on:
   push:
     branches:
       - main
-    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /concepts directory
     paths:
       - 'concepts/**.md'
       - 'imgs/**'
@@ -16,22 +15,20 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-        
+          
       - name: Convert Markdown To PDF 
         uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_dir: concepts
           output_dir: pdfs
           images_dir: imgs
-          # for example <img src="./imgs/file-name.png">
           image_import: ./imgs
-          # Default is true, can set to false to only get PDF files
           build_html: false
-          
-      # This step commits the newly generated PDFs to the Git repo
+
       - name: Commit and push if changed
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Build PDFs" && git push)
+          git diff --quiet && git diff --staged --quiet || git commit -m "Build PDFs"
+          echo "${{ secrets.PAT }}" | git push origin HEAD:main
