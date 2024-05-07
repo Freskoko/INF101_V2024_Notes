@@ -1,8 +1,6 @@
 # Generics
 
-*Generics gjør at feks en funksjon kan ta inn hvilkensomhelst type, eller implementere ting på en smart måte*
-
-Kan ikke brukes på primitive typer
+*Generics gjør at feks en funksjon kan ta inn hvilkensomhelst type, eller implementere ting på en smart måte.. men Kan ikke brukes på primitive typer!*
 
 Eksempel: Box som kan ha hvilken som helst type i seg 
 
@@ -14,7 +12,6 @@ public class MyBox<T> {
   public void set(T element) {
     this.element = element;
   }
-
   public T get() {
     return element;
   }
@@ -33,11 +30,9 @@ public class Pair<A, B> {
     this.first = first;
     this.second = second;
   }
-
   public A getFirst() {
     return this.first;
   }
-
   public B getSecond() {
     return this.second;
   }
