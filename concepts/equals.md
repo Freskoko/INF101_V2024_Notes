@@ -97,24 +97,3 @@ så lag hashcode:
 ```
 
 Også vil det funke!
-
----------
-
-x == y funker for primitive
-
-x == y funker ikke å sammenligne objeter, fordi denne er brukt til å sammenligne stack-verdier. vi skal sammenlignet to objekter forksjellige steder i minnet (heap)
-
-for å kunne sammenligne må man bruke equals metoden for en klasse.
-
-Sånn at vi kan skkrive x.equals(y) eller andre veien rundt.
-
-I Person klasses i Person.java må man opprette en equals metode.
-
-@override
-public boolean equals(Object otherperson)
-- deepequals
-- alle feltvariabel
-- sjekkke for null
-- hashcode
-
-kall equals på alle feltvariabeler (eller deepequals på arrays feks)

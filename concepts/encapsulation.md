@@ -31,6 +31,7 @@ public class Person{
     public String getFriendsImmutable(){ 
         // further than encapsulation, keeping stuff private
         // prevents people from messing with the variable
+        // instead they can mess with the copy of the variable you gave >:)
         return new ArrayList<>(this.friends); 
     }
 }

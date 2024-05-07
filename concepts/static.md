@@ -1,7 +1,7 @@
 # Static
 
-Static makes the function be able to be ran from anywhere with `Object.method()`
-This is good for constants perhaps, but all instances of a class using the method will pont to the same info.
+Static makes the function be able to be ran from anywhere with `Object.staticMethod()`
+This is good for constants perhaps, but all instances of a class using the method will pont to the same info!
 
 NOTE Static har ikke tilgang til `this`!
 
@@ -57,7 +57,7 @@ Siden de forskjellige persons alle peker på samme, vil testen fele siden number
 
 `Statiske variabler som endrer seg er som globale variabler: ondskapsfulle. De bør unngås for enhver pris`
 
-Bruk heller en manager class ! eller feks facotory
+Bruk heller en manager class eller feks facotory
 
 **Dårlig kode**
 

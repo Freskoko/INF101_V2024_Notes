@@ -1,5 +1,7 @@
 # Composition
 
+*Organiser koden slik at en metode har mange andre klasser som feltvariabel*
+
 Composition betyr at vi kun har en klasse Game
 
 Game har feltvariabler som gir ulik funksjonalitet
