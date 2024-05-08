@@ -16,6 +16,22 @@ public Iterable<String> getAllWords(){
     return this.wordList; // wordList is ArrayList<String>
 }
 ```
+
+Uten å endre i main:
+
+```java
+public class Book implements Iterable<Page> {
+
+	this.pages = new ArrayList<Page>
+
+	@Override
+	public Iterable<Page> iterator(){
+		return this.pages.iterator(); 
+}
+}
+```
+
+
 Da kan man bruke den:
 ```java
 public void printAllWords(){

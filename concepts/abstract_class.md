@@ -21,7 +21,7 @@ public abstract class AbstractCoronaData implement ICoronaData{
     public ArrayList<Integer> cumulativeDeaths() {
         ArrayList<Integer> cumulativeSum = new ArrayList<>(); 
         int sum = 0
-        for (int deaths : getDailyDeaths()){ 
+        for (int deaths : this.getDailyDeaths()){ 
             // get daily deaths is from icorona interface. we dont need o
             // to implement getdailydeaths since class is abstract
             // someone else will do it later!
