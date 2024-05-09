@@ -49,6 +49,8 @@ private void openDoor(Door door) {
         door.open();
     else
         System.out.println("Can not open both at the same time");
+        
+        throw new IllegalStateException("Counter num cannot be less than 0")
 }
 ```
 Må ALLTID overholdes!

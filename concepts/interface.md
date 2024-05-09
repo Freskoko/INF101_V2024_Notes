@@ -36,3 +36,14 @@ Grensesnitt kan utvides:
 }`
 
 ![alt text](imgs/interface.png)
+
+
+For å se om du kan lage ett objket av typen B prøv noe sånn:
+
+```java
+// bra!
+B thing = new A
+
+// ikke bra!
+A thing = new B
+```
