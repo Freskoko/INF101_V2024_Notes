@@ -11,11 +11,7 @@ Iterable er et interface som har 1 viktig metode
 - Lager en ny iterator som begynner på begynnelsen
 
 Example lager en iterator:
-```java
-public Iterable<String> getAllWords(){
-    return this.wordList; // wordList is ArrayList<String>
-}
-```
+
 
 Uten å endre i main:
 
@@ -24,10 +20,10 @@ public class Book implements Iterable<Page> {
 
 	this.pages = new ArrayList<Page>
 
-	@Override
-	public Iterable<Page> iterator(){
-		return this.pages.iterator(); 
-}
+    @Override
+    public Iterator<Page> iterator() {
+        return this.pages.iterator();
+    }
 }
 ```
 
@@ -35,7 +31,7 @@ public class Book implements Iterable<Page> {
 Da kan man bruke den:
 ```java
 public void printAllWords(){
-    for (String word : this.getAllWords()){
+    for (String word : book){
         System.out.println(word);
     }
 }

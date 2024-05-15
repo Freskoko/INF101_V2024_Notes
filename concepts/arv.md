@@ -1,6 +1,6 @@
 # Arv (extends)
 
-*A type of Polymorphism*
+*Can be a type of Polymorphism!*
 
 Bruk extends så kan du hente alle feltvariabeler og metoder fra øvre klasse
 

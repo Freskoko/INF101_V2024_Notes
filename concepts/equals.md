@@ -4,7 +4,7 @@
 
 x == y sjekker om de er på samme sted i minne (på stack'en). Funker av å til med primitive variabeler, men hva med egendefinerte? 
 
-Feks.. to Personer med samme navn og id! De er jo like, men er ikke samme sted på minne, så == funker ikke. Vi må @Override equals-metoden
+Feks. to Personer med samme navn og id! De er jo like, men er ikke samme sted på minne, så == funker ikke. Vi må @Override equals-metoden
 
 Vanlig equals er egentlig bare == 
 

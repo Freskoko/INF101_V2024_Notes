@@ -2,10 +2,10 @@
 
 *Unngå bugs.. Hver del av koden skal ha ansvar for en ting.*
 
-![alt text](imgs/modifiers.png)
+![alt text](/imgs/modifiers.png)
 
 When you have a felt-variabel it is important to keep it private.
-You can allow others to acess it through a getter.
+You can allow others to access it through a getter.
 
 Example:
 
@@ -50,7 +50,7 @@ private void openDoor(Door door) {
     else
         System.out.println("Can not open both at the same time");
         
-        throw new IllegalStateException("Counter num cannot be less than 0")
+        throw new IllegalStateException("Both doors cannot be open")
 }
 ```
 Må ALLTID overholdes!

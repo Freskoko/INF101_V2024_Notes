@@ -1,8 +1,8 @@
 # Abstract classes
 
-*A type of Polymorphism*
+*Can be a type of Polymorphism*
 
-Setting a class to abstract classes allows them to only implement some parts of interface.
+Setting a class to abstract classes allows them to only implement some parts of the interface it implements.
 
 we just pick and choose. someone else (or us) will implement the rest later
 

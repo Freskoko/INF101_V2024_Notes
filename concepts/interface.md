@@ -1,6 +1,6 @@
 # Interface
 
-*A type of Polymorphism*
+*Can be a type of Polymorphism*
 
 *Interface gjør det mulig å ha flere klasser som har samme metoder men forskjellig oppførsel*
 
@@ -35,7 +35,7 @@ Grensesnitt kan utvides:
 `interface CommandLineInterface extends KeypressReceiver, ScreenContentProvider {
 }`
 
-![alt text](imgs/interface.png)
+![alt text](/imgs/interface.png)
 
 
 For å se om du kan lage ett objket av typen B prøv noe sånn:
