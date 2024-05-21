@@ -54,3 +54,21 @@ private void openDoor(Door door) {
 }
 ```
 Må ALLTID overholdes!
+
+Question from exam:
+
+```java
+public class Main {
+    public static void main (String[] args) {
+        Person x = new Person("Tor",1999)
+        Person x = new Person("To"+"r",1999)
+    }
+}
+```
+
+Hvorfor gir dette false?
+
+Når man sammenligner med == sammenlignes den verdien som er på stacken. Men for alle objeketer, selv om de "ser" helt like ut (samme navn/føldelsår) vil de ligge på forskjellige minneadresser.
+Da må man bruke .equals metoden (eller Object.equals()).
+
+Men vanlig equals (fra Object) bruker bare ==, vi trenger å overskrive (@Override) denne metoden. Den må sjekke likhet mellom feltvariabelene og så returnere true hvis de er lik. Når man sammenligner navn må man bruke equals() på den og, siden dette er en String og ikke en primitiv.

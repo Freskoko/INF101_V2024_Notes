@@ -65,3 +65,39 @@ public class AuthorThenTitleThenYear implements Comparator<Book>{ // implements 
 
 Da kan vi sorte slikt:
 `Collections.sort(List<Book>, new AuthorThenTitleThenYear());`
+
+## Or, sorting in a bit of an easier fashion using lambda functions
+
+```java
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+/**
+ * This class contains two different methods for sorting
+ * 
+ * @author Martin Vatshelle
+ */
+public class MusicSorter {
+
+	/**
+	 * Sorts the list according to the alphabetic order of Song::getArtistName()
+	 * @param music - the list of songs to be sorted
+	 */
+	public static void sortByArtist(List<Song> music) {
+		Collections.sort(music, Comparator.comparing(Song::getArtist));
+		// OR
+		Collections.sort(music, Comparator.comparing((Song s) -> s.getArtist()));
+	}
+	
+	/**
+	 * Sorts the list according to the Date of Song::getReleaseDate()
+	 * @param music - the list of songs to be sorted
+	 */
+	public static void sortByReleaseDate(List<Song> music) {
+		Collections.sort(music, Comparator.comparing(Song::getReleaseDate));
+		// OR
+		Collections.sort(music, Comparator.comparing((Song s) -> s.getArtist()));
+	}
+}
+```
