@@ -1,0 +1,10 @@
+image: maven:3-openjdk-17
+
+stages:
+  - test
+
+maven_test:
+  stage: test
+  script: "mvn test"
+  only:
+    - master

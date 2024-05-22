@@ -1,6 +1,6 @@
 # Stack vs heap
 
-![alt text](imgs/stackvsheap.png)
+![alt text](/imgs/stackvsheap.png)
 
 Primitives are all the the stack, not heap (since they take so little space)
 
