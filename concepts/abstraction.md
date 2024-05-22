@@ -2,7 +2,7 @@
 
 *Fokuser på det viktigste og gjør det enkelt*
 
-![abstract](imgs/abstract.png)
+![abstract](/imgs/abstract.png)
 
 *Dependency*
 

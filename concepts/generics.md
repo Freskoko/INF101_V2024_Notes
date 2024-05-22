@@ -2,7 +2,10 @@
 
 *Generics gjør at feks en funksjon kan ta inn hvilkensomhelst type, eller implementere ting på en smart måte.. men Kan ikke brukes på primitive typer!*
 
+Generics cannot take in primtive types!
+
 Eksempel: Box som kan ha hvilken som helst type i seg 
+
 
 ```java
 public class MyBox<T> { 
@@ -91,6 +94,13 @@ Kan også bruke
 ```java
 <T extends Comparable<T>>
 ``` 
+
+```java
+public static void addTo(Cat cat, List<? extends Mammal> list){
+  // Her kan ? være en hvilken som helst type under Cat, altså: Mammal, Animal eller Object
+  list.add(cat);
+}
+```
 
 slik at man kan putte inn hva som helst (så lenge klassen som går inn implementer `Comparable` og dermed har `compareTo`)
 

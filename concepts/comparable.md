@@ -68,6 +68,8 @@ Da kan vi sorte slikt:
 
 ## Or, sorting in a bit of an easier fashion using lambda functions
 
+NOTE: We assume `Song implements Comparable<Song>`
+
 ```java
 import java.util.Collections;
 import java.util.Comparator;
